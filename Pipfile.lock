@@ -1,0 +1,25 @@
+{
+    "_meta": {
+        "hash": {
+            "sha256": "95f202a274560758e143a96feed46dccee8f3ee33cb2a90eccff33dd05d44760"
+        },
+        "pipfile-spec": 6,
+        "requires": {
+            "python_version": "3.10"
+        },
+        "sources": [
+            {
+                "name": "pypi",
+                "url": "https://pypi.org/simple",
+                "verify_ssl": true
+            }
+        ]
+    },
+    "default": {
+        "example-lib": {
+            "editable": true,
+            "path": "/libs/example_lib"
+        }
+    },
+    "develop": {}
+}

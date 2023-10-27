@@ -1,0 +1,13 @@
+FROM python:3.10-slim
+
+# Copy libraries
+RUN mkdir /libs
+COPY libs /libs
+COPY Pipfile* /tmp/
+
+# Create virtualenv and make sure we will use it:
+RUN python -m venv /opt/venv
+ENV PATH="/opt/venv/bin:$PATH"
+
+# FAILURE (pipenv==2023.04.20):
+RUN python3 -m pip install pipenv==2023.04.20 && cd /tmp/ && pipenv install --system --deploy --ignore-pipfile
